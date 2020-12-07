@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="myName"
+            type="com.example.aboutme.MyName" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/name_text"
+            style="@style/NameStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={myName.name}"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/nickname_edit"
+            style="@style/NameStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/nickname_text"
+            style="@style/NameStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={myName.nickname}"
+            android:textAlignment="center"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/done_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/done" />
+
+        <ImageView
+            android:id="@+id/star_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_margin"
+            android:contentDescription="@string/yellow_star"
+            app:srcCompat="@android:drawable/btn_star_big_on" />
+
+        <ScrollView
+            android:id="@+id/bio_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/bio_text"
+                style="@style/NameStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:paddingStart="@dimen/padding"
+                android:paddingEnd="@dimen/padding"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam luctus arcu lobortis auctor ornare. Donec risus risus, euismod a orci at, vestibulum dapibus tellus. Phasellus a scelerisque urna. Curabitur fermentum, lorem a rutrum pharetra, felis dolor aliquet felis, id interdum sapien odio vulputate nisl. In porta lacus nisl, vel fringilla ex luctus vel. Aenean lobortis mauris sapien, quis hendrerit enim consectetur quis. Nam sit amet est auctor, pellentesque dui semper, ultricies risus. Cras justo nisl, egestas eu diam in, pretium pellentesque nisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean vehicula urna vitae odio eleifend, a semper felis posuere. Phasellus aliquam sapien eu ante venenatis fringilla.  Nullam sem quam, varius at dictum sed, laoreet vel magna. Nulla tristique tellus commodo scelerisque semper. Aenean congue, elit sit amet accumsan porta, erat ex congue elit, aliquet aliquam ex nisl vitae neque. Nam convallis nibh sit amet eros laoreet porttitor. Curabitur odio leo, vulputate ut dui eget, placerat fermentum metus. Sed sit amet molestie felis. Nam condimentum maximus enim, sit amet iaculis nisl mattis et. Ut enim dolor, feugiat eu felis at, imperdiet tempor nisi. In augue turpis, tincidunt ut sodales vitae, viverra non elit. Praesent quis felis pulvinar, congue erat quis, dictum velit. Praesent et dolor tellus. Vestibulum in vehicula massa, non finibus libero. Interdum et malesuada fames ac ante ipsum primis in faucibus.  Sed et nisi justo. Aenean purus purus, imperdiet ut dui id, tincidunt blandit neque. Curabitur ultrices, urna sed rhoncus placerat, enim mauris sodales massa, iaculis imperdiet nibh est in elit. Curabitur porta semper justo, vitae scelerisque lorem euismod porta. Integer sem magna, pellentesque vitae nibh in, ornare malesuada magna. Quisque in leo ultricies, accumsan sapien vitae, elementum risus. Sed ut suscipit turpis, scelerisque volutpat lorem. Morbi consectetur velit finibus magna maximus, at eleifend tellus dapibus. Maecenas sollicitudin elit fermentum, tincidunt quam in, tincidunt tellus. Sed fringilla neque eget libero gravida iaculis vitae et neque. Vivamus id euismod mauris, mattis molestie mi. Nam fringilla nibh vitae ipsum hendrerit imperdiet. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam felis eros, tincidunt vel fermentum et, ultrices non tortor. Quisque nisi augue, vestibulum vel nunc eu, efficitur dignissim nisi. Maecenas ultricies, tellus eget cursus aliquet, dui mauris pulvinar dui, eget mollis mauris diam at diam.  Duis dictum mattis erat quis tempus. Aliquam tristique quis ex vel sollicitudin. Mauris commodo mauris vel lacus auctor, non tempus dui hendrerit. Phasellus fringilla elit pharetra, convallis dolor id, lobortis massa. Donec euismod, velit a feugiat efficitur, augue nibh tincidunt enim, vitae elementum eros sapien et arcu. Curabitur sit amet consectetur arcu. Duis ultrices placerat nisl, sed venenatis metus malesuada et. Aliquam cursus sit amet nunc non tempus. Nulla facilisi. Aenean varius est at sapien ullamcorper, ut interdum quam efficitur. Aliquam euismod ante sit amet pellentesque efficitur. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer iaculis ante ac velit vulputate, non feugiat ipsum sollicitudin. Proin pellentesque dolor eu iaculis posuere.  Aliquam semper justo sed urna porta, sit amet tincidunt odio pulvinar. Sed nisi ex, dignissim vitae risus nec, condimentum porttitor ex. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla facilisi. Curabitur varius leo ac augue posuere laoreet. Pellentesque quis lacinia nunc, ultricies varius nulla. Etiam sodales ex vel purus rhoncus venenatis. Nam pulvinar ligula nec nunc ultrices efficitur. Cras vel leo a arcu pulvinar cursus. Vivamus vel sapien metus. Nunc nec ultrices mauris. Donec ut nibh vitae urna convallis pretium. Phasellus condimentum pharetra velit ut tempus." />
+        </ScrollView>
+    </LinearLayout>
+</layout>
